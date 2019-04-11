@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google Trends Nite</title>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </head>
+    <body>
+        <div id="container">
+            <h1 id="pageTitle">Google Trends nite</h1>
+        </div>
+    
+        <div id="playerOne">
+            <form>
+                <label for="termInput">Player one name:</label>
+                <input name="termInput" id="nameOne" type="text"/>
+            </form>
+        </div>
+        <div id="playerTwo">
+            <form>
+                <label for="termInput">Player two name:</label>
+                <input name="termInput" id="nameTwo" type="text"/>
+            </form>
+        </div>
+        <button onClick="startGame()">Start game</button>
+    </body>
+    </html>

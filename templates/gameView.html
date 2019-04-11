@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google Trends Nite</title>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </head>
+    <body>
+        <div id="container">
+            <h1 id="pageTitle">Google Trends nite</h1>
+            <h3>Turn: <span id="turn">{{ gameData.turn }}</span></h3>
+        </div>
+        <div>
+            <h2>Your term: <span  id="termOutput">{{ gameData.term }}</span></h2>
+        </div>
+        
+        <div id="playerOne">
+            <h2 id="playerOneName">{{ gameData.playerOne.name }}</h2>
+            <h2>Total score: <span id="playerOneTotalScore">{{ gameData.playerOne.totalScore }}</span></h2>
+            <form>
+                <label for="termInput">Player one term:</label>
+                <input name="termInput" id="termInputOne" type="text"/>
+            </form>
+            <h2>Score this turn: <span id="playerOneCurrentScore"></span></h2>
+        </div>
+
+        <hr/>
+
+        <div id="playerTwo">
+                <h2 id="playerTwoName">{{ gameData.playerTwo.name }}</h2>
+                <h2>Total score: <span id="playerTwoTotalScore">{{ gameData.playerTwo.totalScore }}</h2>
+            <form>
+                <label for="termInput">Player two term:</label>
+                <input name="termInput" id="termInputTwo" type="text"/>
+            </form>
+            <h2>Score this turn: <span id="playerTwoCurrentScore"></span></h2>
+        </div>
+        <button onClick="submitTerms()">Submit</button>
+    </body>
+    </html>
